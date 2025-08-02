@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NavBar } from "../components/navbar/Navabar";
 import { Footer } from "../components/footer/Footer";
 import { Home } from "../pages/Home";
+import { NotFound } from "../pages/NotFound";
 
 
 export function MainRouter(){
@@ -10,6 +11,8 @@ export function MainRouter(){
             <NavBar />
             <Routes>
                 <Route path="/" element={<Home />} />
+
+                <Route path="/*" element={<NotFound />} />
             </Routes>
             <Footer />
         </BrowserRouter>
